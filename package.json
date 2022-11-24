@@ -4,14 +4,14 @@
   "description": "cicd の環境を構築するためのレポジトリ",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/walnut-pro/cicd.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "walnut-pro",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/walnut-pro/cicd/issues"

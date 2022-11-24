@@ -1,14 +1,21 @@
-name: Swift
+name: CI
 
-on: [push]
+on:
+  push:
+    branches:
+      - master
 
 jobs:
   build:
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
-      - name: Build
-        run: swift build
-      - name: Run tests
-        run: swift test
+      - uses: actions/checkout@v1
+      - name: Setup NodeJs
+        uses: actions/setup-node@v1
+        with:
+          node-version: "16.x"
+      - name: Install Dependencies
+        run: npm install
+      - name: Run test
+        run: npm test
